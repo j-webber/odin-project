@@ -16,17 +16,17 @@ def fibs(n)
   fibs_array
 end
 
-print fibs(9)
+print fibs(8)
 
-def fibs_rec(n)
-  arr = [0]
+def fibs_rec(n, arr = [0])
+  puts 'This was printed recursively'
   if n == 0
     return arr
   elsif n == 1
     return arr.push(1)
   else
-    return fibs_rec(n - 1).push(fibs_rec(n - 1)[-2] + fibs_rec(n - 1)[-1])
+    return fibs_rec(n - 1, arr).push(arr[-2] + arr[-1])
   end
 end
 
-print fibs_rec(9)
+print fibs_rec(8)
