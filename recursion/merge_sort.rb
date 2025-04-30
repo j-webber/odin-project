@@ -1,5 +1,5 @@
 def merge_sort(arr)
-  if arr.length == 1
+  if arr.length < 2
     return arr
   end
 
@@ -24,7 +24,7 @@ def merge_sort(arr)
   return sorted_arr
 end
 
-print merge_sort([3, 2, 1, 13, 8, 5, 0, 1])
+print merge_sort([])
 
 
 
