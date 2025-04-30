@@ -1,25 +1,19 @@
 def fibs(n)
-  fibs_array = [0]
-  digit = 0
-  
-  if n == 0
-    return fibs_array
-  end
-
   fibs_array = [0, 1]
   
+  return fibs_array[0] if n == 0
+
   while n > 1
-    fibs_array.push(fibs_array[-1] + digit)
+    fibs_array.push(fibs_array[-1] + fibs_array[-2])
     n -= 1
-    digit = fibs_array[-2]  
   end
+  
   fibs_array
 end
 
-print fibs(8)
+print fibs(1)
 
 def fibs_rec(n, arr = [0])
-  puts 'This was printed recursively'
   if n == 0
     return arr
   elsif n == 1
